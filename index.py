@@ -39,10 +39,13 @@ class WebDownloaderMenu():
                 n+=1
             res = int(input("\n"))
             print(f"\nYou have chosen {quality_list[res-1]['resolution']}.")
-            VideoDownload_mp4(url, quality_list[res-1]['resolution'])
+            namefile = str(input("\nEnter a name for the file:\n"))
+            VideoDownload_mp4(url, quality_list[res-1]['resolution'], namefile)
 
         elif select == 2:
-            pass
+            url = str(input("\nPaste here the link of the video:\n"))
+            name = str(input("\nEnter a name for the file:\n"))
+            VideoDownload_mp3(url, name)
     
     def FacebookOption(self):
         pass
@@ -54,28 +57,3 @@ class WebDownloaderMenu():
         pass
 
 start = WebDownloaderMenu()
-# select = int(input("What do you want to download?\n1. Youtube Video.\n2. Youtube Video Music.\n"))
-
-# if select == 1:
-#     url = str(input("Paste here the link of the video:\n"))
-#     quality_list = GetVideoQuality(url)
-#     print("\nChoose the resolution you want it. (type the number)\n")
-#     n = 1
-#     for i in quality_list:
-#         print(f"{n}. {i['resolution']}")
-#         n+=1
-    
-#     res = int(input("\n"))
-#     print(f"You have choosen {quality_list[res-1]['resolution']}.")
-
-#     download = VideoDownload_mp4(url, quality_list[res-1]['resolution'])
-
-# elif select == 2:
-#     url = str(input("Paste here the link of the video:\n"))
-#     name = str(input("How do you want to name it?\n"))
-#     download = VideoDownload_mp3(url, name)
-
-# x = str(input("video link:\n"))
-
-# check_quality = GetVideoQuality(x)
-# print(check_quality)
