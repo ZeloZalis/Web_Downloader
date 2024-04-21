@@ -39,7 +39,7 @@ def GetVideoQuality(url):
 def VideoDownload_mp4(url, res, name):
     try:
         yt = pytube.YouTube(url)
-        folder = "YouTube Videos"
+        folder = "YouTube_Videos"
         video = yt.streams.get_by_resolution(resolution=res)
         video.download(folder, filename=f"{name}.mp4")
         print("downloaded.")
@@ -49,7 +49,7 @@ def VideoDownload_mp4(url, res, name):
 def VideoDownload_mp3(url, name):
     try:
         yt = pytube.YouTube(url)
-        folder = "YouTube Music"
+        folder = "YouTube_Music"
         stream = yt.streams.get_audio_only()
         stream.download(folder, filename=f"{name}.mp3")
         print("\nDownloaded.")
