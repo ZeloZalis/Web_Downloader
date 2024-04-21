@@ -56,4 +56,7 @@ class WebDownloaderMenu():
     def InstagramOption(self):
         pass
 
+    def StayOrLeave(self):
+        pass
+
 start = WebDownloaderMenu()
