@@ -1,5 +1,4 @@
 from functions.youtube import *
-import sys
 
 class WebDownloaderMenu():
     def __init__(self):
@@ -61,5 +60,3 @@ class WebDownloaderMenu():
         pass
 
 start = WebDownloaderMenu()
-
-sys.exit(0)
