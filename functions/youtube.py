@@ -44,7 +44,8 @@ def VideoDownload_mp4(url, res, name):
         video.download(folder, filename=f"{name}.mp4")
         print("downloaded.")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"\n{e}")
+        print("Can't download this resolution.")
 
 def VideoDownload_mp3(url, name):
     try:
