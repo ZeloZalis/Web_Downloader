@@ -32,7 +32,7 @@ class WebDownloaderMenu():
         if select == 1:
             url = str(input("\nPaste here the link of the video:\n"))
             quality_list = GetVideoQuality(url)
-            print("\nChoose the resoluti1on you want it:")
+            print("\nChoose the resolution you want it:")
             n=1
             for i in quality_list:
                 print(f"{n}. {i['resolution']}")
