@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}ZZ Downloader{% endblock %}
+
+{% block content %}
+
+<body>
+    <h1 style="background-color: brown; color: white; text-align: center;">
+        ZZ Downloader
+    </h1>
+    {% if top_options %}
+        {% for option in top_options %}
+            <li style="color: beige;">{{option}}</li>
+        {% endfor %}
+    {% else %}
+        <p>No hay lista disponible.</p>
+{% endif %}
+    <p style="color: beige; background-color: red;">
+        Esta página sin fines de lucro permite la descarga de contenido multimedia (.mp3/.mp4).
+    </p>
+</body>
+{% endblock %}

@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    <link rel="icon" href="https://www.iconsdb.com/icons/preview/red/downloading-updates-xxl.png">
+    <style>
+        body {
+            background-image: url("https://images2.alphacoders.com/133/1339621.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    {% include "bar_templates/top_bar.html" %}
+    {% block content %} {% endblock %}
+</body>
+</html>
