@@ -16,15 +16,26 @@ from django.db import models
 # De la siguiente forma se puede hacer un SELECT * desde la misma consola:
 # https://paste.ofcode.org/TNwQpj86iB7UQ46vcgzzgr
 
+# Para que un registro pueda ser null, se debe agregar dentro del paréntesis
+# (blank=True, null=True)
 class Data(models.Model):
-    website = models.CharField(max_length=10)
-    link = models.CharField(max_length=100)
-    frmat = models.CharField(max_length=4)
+    website = models.CharField(max_length=10, verbose_name="Website")
+    link = models.CharField(max_length=100, verbose_name="Link")
+    frmat = models.CharField(max_length=4, verbose_name="Format")
+
+    def __str__(self):
+        return f"{self.website} - {self.frmat}"
 
 class User(models.Model):
-    user_ip = models.CharField(max_length=20)
-    country = models.CharField(max_length=30)
+    user_ip = models.CharField(max_length=20, verbose_name="User IP")
+    country = models.CharField(max_length=30, verbose_name="Country")
+
+    def __str__(self):
+        return f"{self.country} - {self.user_ip}"
 
 class Download(models.Model):
-    date = models.DateField()
+    date = models.DateField(verbose_name="Date")
     succesful = models.BooleanField()
+
+    def __str__(self):
+        return f"{self.date}, succesful: {self.succesful}"
