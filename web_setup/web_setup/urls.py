@@ -17,9 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from web_setup.views import first_page, zz_yt
+from Downloader import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main_page/', first_page),
-    path('zz_yt/', zz_yt)
+    path('zz_yt/', zz_yt),
+    path('db_check/', views.dbSearch),
+    path('search/', views.insideCheck),
 ]

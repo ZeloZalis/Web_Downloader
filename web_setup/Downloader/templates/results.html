@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Busqueda Web</title>
+</head>
+<body>
+    <p>Estás buscando: <strong>{{query}}</strong></p>
+    {% if web_get %}
+        <p>Web encontrada: {{web_get|length}} veces.</p>
+        <ul>
+            {% for web in web_get %}
+            <l1>
+                {{web.website}}
+            </l1>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>No se ha encontrado ninguna web.</p>
+        
+    {% endif %}
+</body>
+</html>
