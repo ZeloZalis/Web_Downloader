@@ -1,7 +1,7 @@
 import pytube
 
 #La siguiente función permite obtener la calidad del vídeo a descargar
-def GetVideoQuality(url):
+def get_video_quality(url):
     try:
         #Obtenemos el vídeo, y creamos una lista con las resoluciones y bitrates
         yt = pytube.YouTube(url)
@@ -36,7 +36,7 @@ def GetVideoQuality(url):
     except Exception as e:
         print(f"Error: {e}")
 
-def VideoDownload_mp4(url, res, name):
+def video_download_mp4(url, res, name):
     try:
         yt = pytube.YouTube(url)
         folder = "YouTube_Videos"
@@ -47,7 +47,7 @@ def VideoDownload_mp4(url, res, name):
         print(f"\n{e}")
         print("Can't download this resolution.")
 
-def VideoDownload_mp3(url, name):
+def video_download_mp3(url, name):
     try:
         yt = pytube.YouTube(url)
         folder = "YouTube_Music"
